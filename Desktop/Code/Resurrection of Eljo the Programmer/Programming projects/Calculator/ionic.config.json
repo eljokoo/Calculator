@@ -1,0 +1,8 @@
+{
+  "name": "Calculator",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

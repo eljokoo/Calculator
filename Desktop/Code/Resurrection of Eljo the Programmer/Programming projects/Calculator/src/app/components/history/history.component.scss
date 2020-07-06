@@ -1,0 +1,42 @@
+.history {
+   height: 200px;
+   width: 250px;
+   margin: 5px auto auto auto;
+   border: 3px #aaa9ad solid;
+   // border-radius: 20px;
+   overflow-y: scroll;
+   z-index: 10;
+}
+
+.historyChildren {
+   background: rgba(255, 255, 255, 0.863);
+   color: rgb(59, 59, 59);
+   font-family: 'Arial Narrow', Arial, sans-serif;
+   padding: 4px;
+   //border-radius: 10px;
+   border-bottom: 1px dotted gray;
+}
+
+.historyChildren:hover {
+   background: rgba(255, 255, 255, 0.733);
+}
+
+.topText {
+   display: flex;
+}
+
+.bottomText {
+   display: flex;
+   justify-content: flex-end;
+   font-size: 23px;
+}
+
+@media only screen and (min-width: 500px) {
+   .history {
+      width: 330px;
+      margin: 10px auto auto auto;
+      border: 3px #aaa9ad solid;
+      
+      padding-bottom: 4px;
+   }
+}

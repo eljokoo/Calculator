@@ -1,0 +1,6 @@
+<div class="history">
+  <div *ngFor="let historyObject of historyObjects" class="historyChildren">
+    <div class="topText">{{ historyObject.value1 }} {{ historyObject.operator }} {{ historyObject.value2 }}</div>
+    <div class="bottomText">{{ historyObject.result }}  </div>
+  </div>
+</div>

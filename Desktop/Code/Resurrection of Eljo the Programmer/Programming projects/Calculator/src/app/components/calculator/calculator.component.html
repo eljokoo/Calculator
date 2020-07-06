@@ -1,0 +1,19 @@
+<div class="calculator">
+  <h2>TI-3190</h2>
+  <div class="screen">
+     <input id="calc" class="result" type="text" readonly value="{{ result }}">
+  </div>
+  <div class="functional-buttons">
+     <button (click)="changeMinus()" title="Click this button to switch the . and - buttons" class="hismin">{{ minusStatus == 0 ? '-' : '.'}}</button>
+     <button (click)="toggleHistory()" title="Click this button to toggle history or calculator" class="hismin">{{ historyToggle == 0 ? 'H' : 'C' }}</button>
+  </div>
+  <div class="buttons" *ngIf="historyToggle == 0">
+    <button class="button long" *ngFor="let longButton of longButtons" (click)="addNumber(longButton)">
+      {{ longButton }}
+    </button>
+    <button class="button short" *ngFor="let button of buttons" (click)="addNumber(button)">
+      {{ button }}
+    </button>
+  </div>
+  <app-history *ngIf="historyToggle == 1" [historyObjects]="this.filerService.fileContents.reverse()"></app-history>
+</div>
